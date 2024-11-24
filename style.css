@@ -1,0 +1,277 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importando la fuente Montserrat desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif; /* Tipografía principal */
+  color: #212429; /* Negro como color base de texto */
+}
+
+/* Contenedor principal del menú de navegación */
+.navbar {
+  background-color: #212429; /* Negro */
+  padding: 16px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px; /* Ancho de pantalla en diseño */
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+
+/* Estilo para los ítems del navbar */
+.navbar-item {
+  color: #ffffff; /* Blanco */
+  font-size: 16px; /* Tamaño fijo para barra de navegación */
+  padding: 0 10px;
+  flex: 1; /* Distribuye los elementos equitativamente */
+  text-align: center;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.navbar-item i {
+  font-size: 22px; /* Tamaño adaptable para íconos */
+}
+
+/* Estilo para los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 32px; /* Tamaño de fuente para títulos */
+  font-weight: bold; /* Usar variante Bold de Montserrat */
+  color: #212429; /* Negro */
+}
+/* Estilo para la sección de Nuevas Colecciones */
+.new-collections {
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.new-collections h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: #212429;
+}
+
+/* Grid para las colecciones */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 16px; /* espacio entre las tarjetas */
+}
+
+/* Estilo individual para cada ítem de la colección */
+.collection-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.collection-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Flexbox para alinear la descripción y el precio en la misma línea */
+.collection-item .details {
+  display: flex;
+  justify-content: space-between; /* Coloca la descripción a la izquierda y el precio a la derecha */
+  align-items: center; /* Centra verticalmente ambos elementos */
+  margin-top: 8px;
+}
+
+.collection-item .description {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #212429;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.collection-item .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #212429;
+  text-align: right; /* Alinea el precio a la derecha */
+}
+
+/* Ajustes responsive para pantallas medianas (2 columnas) */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+
+  .new-collections h2 {
+    font-size: 28px;
+  }
+
+  .collection-item {
+    padding: 12px;
+  }
+
+  .collection-item .description {
+    font-size: 13px;
+  }
+
+  .collection-item .price {
+    font-size: 14px;
+  }
+}
+/* Ajustes responsive para pantallas pequeñas (1 columna) */
+@media (max-width: 480px) {
+  .collection-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .new-collections h2 {
+    font-size: 24px;
+  }
+
+  .collection-item {
+    padding: 8px;
+  }
+
+  .collection-item .description {
+    font-size: 12px;
+  }
+
+  .collection-item .price {
+    font-size: 13px;
+  }
+}
+
+/* Estilo para las tarjetas */
+.card {
+  font-size: 14px; /* Tamaño de fuente para texto en tarjetas */
+  padding: 16px; /* Padding base de 16px */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  color: #212429; /* Texto en negro */
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #212429; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  padding: 16px 32px; /* Espaciado interno */
+  margin-top: 40px; /* Separación con el contenido anterior */
+}
+
+.footer-container {
+  display: flex; /* Usamos Flexbox para distribuir los elementos en una fila */
+  justify-content: space-between; /* Los ítems se distribuyen equitativamente */
+  align-items: center; /* Los ítems están alineados verticalmente al centro */
+  flex-wrap: wrap; /* Permite que los ítems se ajusten al tamaño disponible */
+}
+
+.footer-item {
+  display: flex; /* Alineación del ícono y texto en línea */
+  align-items: center; /* Centra verticalmente el ícono y el texto */
+  margin: 8px 16px; /* Espaciado entre los ítems */
+}
+
+.footer-item i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/* Hacer que el footer se ajuste correctamente en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Mantiene la fila en pantallas pequeñas */
+    justify-content: space-between; /* Espacio entre los ítems */
+  }
+
+  .footer-item {
+    margin: 8px 12px; /* Reduce el margen entre los ítems */
+  }
+
+  .footer-item span {
+    font-size: 14px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+  }
+
+  .footer-item i {
+    font-size: 18px; /* Ajusta el tamaño del ícono en pantallas pequeñas */
+  }
+}
+
+/* Ajuste del contenedor para dispositivos móviles medianos */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-item {
+    flex-basis: 50%; /* Cada ítem ocupa la mitad del ancho */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    padding: 10px 0;
+  }
+
+  .navbar-item i {
+    font-size: 20px; /* Ajusta el tamaño de los íconos en pantallas más pequeñas */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 28px; /* Reduce el tamaño de los títulos en pantallas medianas */
+  }
+
+  .card {
+    font-size: 12px; /* Tamaño más pequeño en tarjetas para pantallas medianas */
+    padding: 16px;
+  }
+}
+
+/* Estilo para móviles muy pequeños */
+@media (max-width: 480px) {
+  .navbar-container {
+    flex-direction: wrap; /* Los ítems se apilan en columnas */
+    text-align: center;
+  }
+
+  .navbar-item {
+    font-size: 12px; /* Ajuste del texto en pantallas pequeñas */
+    padding: 10px 0;
+  }
+
+  .navbar-item i {
+    font-size: 18px; /* Íconos más pequeños en pantallas muy pequeñas */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 24px; /* Tamaño más reducido en pantallas pequeñas */
+  }
+
+  .card {
+    font-size: 12px; /* Tamaño de fuente ajustado en tarjetas */
+    padding: 12px;
+  }
+}
